@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit]
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index
     @projects = Project.all
@@ -25,9 +25,16 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    if @project.update(project_params)
+      redirect_to project_path(@project)
+    else
+      render :new, status: :unprocessable_entity # is it the right one to use?
+    end
   end
 
   def destroy
+    @project.destroy
+    redirect_to projects_path, status: :see_other
   end
 
   private
