@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root to:"pages#home"
   get "/about", to: "pages#about"
-  resources :projects, only: [:index, :show, :new, :create]
+  resources :projects, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 end
