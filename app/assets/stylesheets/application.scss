@@ -1,0 +1,32 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+
+// External libraries
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+// Other univeral styles
+* {
+  background-color: $background-color;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $my-font;
+  color: $text-black;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 300;
+}
