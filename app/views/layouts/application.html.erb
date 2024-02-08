@@ -14,7 +14,11 @@
     <!-- Top nav -->
     <div class="navbar">
       <%= link_to "erinaho.co", root_path %>
-      <p>Currently: Designing Digital Experiences</p>
+      <p>
+        <span data-controller="typed" data-typed-strings-value="<%= ["Designing Digital Experiences", "Looking for new opportunities"] %>">
+          Designing Digital Experiences
+        </span>
+      </p>
       <%= link_to "About", about_path %>
     </div>
     <!-- Other testing junk -->
