@@ -1,10 +1,21 @@
-<h1>My projects</h1>
+<!-- Intro -->
+<div class="intro">
+  <h2>
+  I'm a digital product designer with 10+ years of experience crafting high-quality products across finance, hospitality and art sectors mainly in startup settings. I thrive in the midst of complexity and ambiguity and excel as a cross-functional collaborator working with diverse teams to bring design concepts to life.
+  </h2>
+</div>
 
-<ul>
-  <% @projects.each do |project| %>
-  <li>
-    <%= link_to project.title, project_path(project) %>
-    <%= link_to "Delete", project_path(project), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  </li>
-  <% end %>
-</ul>
+<!-- All projects -->
+<div class="projects">
+  <h2>Works:</h2>
+  <div class="list">
+    <% @projects.each do |project| %>
+      <div class="list-item">
+        <h3><%= link_to project.title, project_path(project) %></h3>
+      </div>
+    <% end %>
+      <div class="list-item">
+        <%= link_to "+ Add a new project", new_project_path %>
+      </div>
+  </div>
+</div>

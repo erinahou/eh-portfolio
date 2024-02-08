@@ -1,0 +1,23 @@
+.intro {
+  padding-bottom: $spacing-xxl;
+}
+
+.projects {
+  display: flex;
+  padding-top: $spacing-xxl;
+
+  h2 {
+    width: 30%;
+  }
+
+  .list {
+    margin-left: $spacing-xxl;
+    width: 70%;
+    // flex-grow: 1;
+  }
+
+  .list-item {
+    border-top: 1px solid $border;
+    padding: $spacing-xl 0;
+  }
+}

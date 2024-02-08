@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root to:"pages#home"
+  root to:"projects#index"
   get "/about", to: "pages#about"
-  resources :projects, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :projects, only: [:show, :new, :create, :edit, :update, :destroy]
 end
