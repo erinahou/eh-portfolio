@@ -13,15 +13,19 @@
   <body>
     <!-- Top nav -->
     <div class="navbar">
-      <a href="#">www.erinaho.co</a>
+      <%= link_to "erinaho.co", root_path %>
       <p>Currently: Designing Digital Experiences</p>
-      <a href="#">About me</a>
+      <%= link_to "About", about_path %>
     </div>
     <!-- Other testing junk -->
-    <%= link_to "Erina Ho Logo", root_path %>
-    <%= link_to "Projects", projects_path %>
-    <%= link_to "+ Add a new project", new_project_path %>
-    <%= link_to "About me", about_path %>
-    <%= yield %>
+    <div class="main-content">
+      <%= yield %>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <%= link_to "LinkedIn", "https://www.linkedin.com/in/erinaho/", target: "_blank" %>
+      <%= link_to "Read.cv", "https://read.cv/erinaho", target: "_blank" %>
+      Website built by me:  <%= link_to "Github", "https://github.com/erinahou", target: "_blank" %>
+    </footer>
   </body>
 </html>

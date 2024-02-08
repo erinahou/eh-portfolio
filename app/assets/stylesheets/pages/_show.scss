@@ -1,0 +1,27 @@
+.project-intro {
+  display: flex;
+  background-color: white;
+  padding: $spacing-xxl;
+  border-radius: $border-radius-xl;
+
+  .text {
+    width: 50%;
+    padding-right: $spacing-xxl;
+  }
+
+  .description {
+    padding: $spacing-l 0;
+  }
+
+  .img-container {
+    width: 50%;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: $border-radius-xl;
+  }
+}
+
+.tag-container {
+  display: flex;
+  gap: 1em;
+}
