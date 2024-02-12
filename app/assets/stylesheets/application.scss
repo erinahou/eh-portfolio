@@ -9,13 +9,17 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "config/fonts";
 
 // Other univeral styles
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: $my-font;
-  color: $text-black;
+  color: $eh-text-primary;
+  // Properties to solve thick fonts ( will work for safari, chrome and firefox)
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -28,23 +32,46 @@ a {
 
 h1 {
   font-size: 80px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h2 {
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h3 {
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
+  color: $eh-text-secondary;
 }
 
 .main-content {
   padding: $spacing-xxl;
+}
+
+/* Class to apply border radius to elements */
+.br-24 {
+  border-radius: $border-radius-l;
+}
+
+/* Media queries */
+@media screen and (max-width: 800px) {
+  .main-content {
+    padding: $spacing-l;
+  }
 }

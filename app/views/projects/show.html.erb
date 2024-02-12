@@ -2,18 +2,33 @@
 <div class="project-intro">
   <div class="text">
     <h1><%= @project.title %></h1>
-    <h2><%= @project.summary %></h2>
-    <p class="description"><%= @project.description %></p>
+    <h5><%= @project.description %></h5>
     <!-- Tags (Build this so it's dynamic) -->
     <div class="tag-container">
       <p class="tags">Fintech</p>
       <p class="tags">Product</p>
     </div>
   </div>
-  <div class="img-container">
-    <%= cl_image_tag @project.photo.key, crop: :fill %>
-  </div>
+  <% if @project.photo.key %>
+    <div class="img-container">
+      <%= cl_image_tag @project.photo.key, crop: :fill %>
+    </div>
+  <% end %>
 </div>
+
+<!--
+<div class="project-description">
+  <h3>Designing for simplicity, ease...</h3>
+  <h5><%= @project.description %></h5>
+</div>
+-->
+
+<!-- Display content (partials) based by project -->
+<% if @project.title == "Finspo: Product" %>
+  <%= render "finspo_product" %>
+<% elsif @project.title == "Finspo: Marketing" %>
+  <%= render "finspo_marketing" %>
+<% end %>
 
 <%= link_to "Delete project",
   project_path(@project),

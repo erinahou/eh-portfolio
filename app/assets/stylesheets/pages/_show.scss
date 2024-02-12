@@ -1,27 +1,84 @@
 .project-intro {
   display: flex;
-  background-color: white;
-  padding: $spacing-xxl;
-  border-radius: $border-radius-xl;
+  height: 700px;
 
   .text {
     width: 50%;
     padding-right: $spacing-xxl;
   }
 
-  .description {
-    padding: $spacing-l 0;
+  h5 {
+    padding: $spacing-m 0;
   }
 
   .img-container {
     width: 50%;
     height: 80vh;
     overflow: hidden;
-    border-radius: $border-radius-xl;
+    border-radius: 0 $border-radius-xl $border-radius-xl 0;
   }
 }
 
 .tag-container {
   display: flex;
   gap: 1em;
+  margin-top: $spacing-m;
+}
+
+.project-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  margin: $spacing-xxl 0;
+}
+
+/* Finspo case studies */
+
+.finspo-case-studies {
+  .item {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px 32px;
+    margin-top: $spacing-xxl;
+  }
+
+  .case-study-label {
+    color: $eh-text-tertiary;
+  }
+
+  .title {
+    grid-column-start: span 6;
+  }
+
+  h5 {
+    margin-bottom: $spacing-s;
+  }
+
+  .pca {
+    grid-column-start: span 2;
+  }
+
+  .rectangle-full {
+    grid-column-start: span 6;
+    height: 700px;
+    background-color: $eh-background-purple;
+  }
+
+  .square-half-half {
+    grid-column-start: span 3;
+    height: 640px;
+    background-color: $eh-background-purple;
+  }
+}
+
+/* Media queries */
+@media screen and (max-width: 800px) {
+  .finspo-case-studies {
+    .pca {
+      grid-column-start: span 6;
+    }
+
+    .square-half-half {
+      grid-column-start: span 6;
+    }
+  }
 }

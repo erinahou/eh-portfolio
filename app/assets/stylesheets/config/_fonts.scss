@@ -1,15 +1,14 @@
-// // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+// // // Import Google fonts
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 // // Define fonts for body and headers
 // $body-font: $my-font, "Helvetica", "sans-serif";
 // $headers-font: $my-font, "Helvetica", "sans-serif";
 
-// // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "PPRadioGroteskRegular";
-//   src: font-url('../fonts/PPRadioGrotesk-Regular.otf');
-//   src: font-url('../fonts/PPRadioGrotesk-Regular.otf') format('opentype');
-// }
+// To use a font file (.woff) uncomment following lines
+@font-face {
+  font-family: "PPRadioGrotesk-Regular";
+  src: font-url('../../fonts/PPRadioGrotesk-Regular.woff') format('woff');
+}
 
-$my-font: "Inter", "Helvetica", "sans-serif";
+$my-font: "PPRadioGrotesk-Regular", "Helvetica", "sans-serif";
