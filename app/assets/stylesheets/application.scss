@@ -69,6 +69,15 @@ p {
   border-radius: $border-radius-l;
 }
 
+/* Class to apply border radius to elements */
+.bg-navy {
+  background-color: $eh-background-navy;
+}
+
+.bg-blue {
+  background-color: $eh-background-blue;
+}
+
 /* Media queries */
 @media screen and (max-width: 800px) {
   .main-content {
