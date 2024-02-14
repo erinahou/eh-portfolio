@@ -78,6 +78,10 @@
     max-height: 80%;
     max-width: 80%;
   }
+
+  .emma-illo {
+    width: 50%;
+  }
 }
 
 .square-half-half {
@@ -94,6 +98,34 @@
   }
 }
 
+.square-triptic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: span 2;
+  padding: $spacing-xxl 0;
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 70%;
+  }
+}
+
+.rectangle-two-thirds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: span 4;
+  padding: $spacing-xxl 0;
+  img {
+    width: 80%;
+  }
+}
+
 .full-bleed {
   img {
     width: 100%;
@@ -103,6 +135,47 @@
 dotlottie-player {
   width: 70%;
 }
+
+.emma-illo {
+  height: 700px;
+
+  img {
+    width: 50%;
+  }
+}
+
+.fixed-rate-rectangle {
+  padding: $spacing-xxl;
+
+  img {
+    border-radius: $spacing-s;
+    width: 80%;
+  }
+}
+
+.fixed-rate-square-ad {
+  video {
+    border-radius: $spacing-s;
+    width: 70%;
+  }
+}
+
+.brand-awareness-square-ad {
+  video {
+    border-radius: $spacing-s;
+    border: 1px solid $eh-border-white;
+    width: 70%;
+  }
+}
+
+.learn-hub-recording {
+  padding: $spacing-xxl;
+
+  video {
+    border-radius: $border-radius-s;
+  }
+}
+
 
 /* Media queries */
 @media screen and (max-width: 800px) {
