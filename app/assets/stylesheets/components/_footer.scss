@@ -1,8 +1,6 @@
 footer {
   display: flex;
-  justify-content: flex-end;
-  border: 1px solid $border;
-  padding: $spacing-m;
-  border-radius: $border-radius-s;
-  margin: $spacing-xxl
+  justify-content: space-between;
+  border-top: 1px solid $border;
+  padding: $spacing-xl;
 }

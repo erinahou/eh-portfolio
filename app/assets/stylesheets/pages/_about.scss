@@ -1,0 +1,11 @@
+.about-erina {
+  grid-column-start: span 6;
+}
+
+.bio-block {
+  grid-column-start: span 2;
+
+  li {
+    padding-top: $spacing-m;
+  }
+}

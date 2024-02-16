@@ -1,21 +1,51 @@
-<!-- Intro -->
-<div class="intro">
-  <h2>
-  I'm a digital product designer with 10+ years of experience crafting high-quality products across finance, hospitality and art sectors mainly in startup settings. I thrive in the midst of complexity and ambiguity and excel as a cross-functional collaborator working with diverse teams to bring design concepts to life.
-  </h2>
+<div class="grid-container">
+  <!-- Intro -->
+  <div class="intro">
+    <h4>
+    I'm a digital product designer with 10+ years of experience crafting high-quality products across finance, hospitality and art sectors mainly in startup settings. I thrive in the midst of complexity and ambiguity and excel as a cross-functional collaborator working with diverse teams to bring design concepts to life. <%= link_to "More", about_path, class: "more" %>
+    </h4>
+  </div>
+
+  <div class="skills">
+    <p>Skills</p>
+    <ul>
+      <li>
+        <p class="p-top-m">UI/UX</p>
+        <p>Art direction</p>
+        <p>Brand</p>
+        <p>Animation</p>
+        <p>Project management</p>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Javascript</p>
+        <p>Ruby</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- All projects -->
+  <% @projects.each_with_index do |project, index| %>
+    <% if index % 2 == 0 %>
+      <div class="list-item left">
+        <h3><%= link_to project.title, project_path(project) %></h3>
+      </div>
+    <% else %>
+      <div class="list-item right">
+        <h3><%= link_to project.title, project_path(project) %></h3>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
-<!-- All projects -->
-<div class="projects">
-  <h2>Works:</h2>
-  <div class="list">
+
+<!-- Old code
+
+  <div class="projects">
     <% @projects.each do |project| %>
       <div class="list-item">
         <h3><%= link_to project.title, project_path(project) %></h3>
       </div>
     <% end %>
-      <div class="list-item">
-        <%= link_to "+ Add a new project", new_project_path %>
-      </div>
   </div>
-</div>
+
+-->

@@ -31,7 +31,7 @@ a {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 56px;
   font-weight: 400;
 }
 
@@ -60,8 +60,30 @@ p {
   color: $eh-text-secondary;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+
+  .company-name {
+    text-decoration: underline;
+    padding-top: $spacing-l;
+  }
+}
+
+.navbar {
+  border-bottom: 1px solid $eh-border-black;
+}
+
 .main-content {
   padding: $spacing-xxl;
+  background: linear-gradient(to right, $eh-border-black 1px, transparent 1px);
+  background-size: 16.67%; /* Adjust the grid size */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $spacing-xl $spacing-xxl;
 }
 
 /* Class to apply border radius to elements */
@@ -80,6 +102,33 @@ p {
 
 .bg-blue {
   background-color: $eh-background-blue;
+}
+
+.bg-cream {
+  background-color: $eh-background-cream;
+}
+
+.bg-brown {
+  background-color: $eh-background-brown;
+}
+
+/* Class to apply for text color */
+.txt-tertiary {
+  color: $eh-text-tertiary;
+}
+
+/* Class to apply for spacing */
+.p-top-m {
+  padding-top: $spacing-m;
+}
+
+.p-top-xl {
+  padding-top: $spacing-xl;
+}
+
+/* Others */
+.more {
+  text-decoration: underline;
 }
 
 /* Media queries */

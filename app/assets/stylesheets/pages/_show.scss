@@ -1,34 +1,16 @@
-.project-intro {
-  display: flex;
-  height: 700px;
+.project-title {
+  grid-column-start: span 5;
+}
 
-  .text {
-    width: 50%;
-    padding-right: $spacing-xxl;
-  }
 
-  h5 {
-    padding: $spacing-m 0;
-  }
-
-  .img-container {
-    width: 50%;
-    height: 80vh;
-    overflow: hidden;
-    border-radius: 0 $border-radius-xl $border-radius-xl 0;
-  }
+.project-description {
+  grid-column-start: span 7;
 }
 
 .tag-container {
   display: flex;
   gap: 1em;
   margin-top: $spacing-m;
-}
-
-.project-description {
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
-  margin: $spacing-xxl 0;
 }
 
 /* Finspo case studies */
@@ -173,6 +155,19 @@ dotlottie-player {
 
   video {
     border-radius: $border-radius-s;
+  }
+}
+
+.nazuna-business-card {
+  img {
+    width: 100%;
+  }
+}
+
+/* Kiraku Style Guide */
+.kiraku-logo {
+  img {
+    width: 30%;
   }
 }
 
