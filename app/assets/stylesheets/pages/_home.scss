@@ -1,23 +1,24 @@
 .intro {
   padding-bottom: $spacing-xxl;
+  grid-column-start: span 8;
 }
 
-.projects {
-  display: flex;
-  padding-top: $spacing-xxl;
+.skills {
+  grid-column-start: span 4;
+}
 
-  h2 {
-    width: 30%;
-  }
+.list-item {
+  grid-column-start: span 6;
+  height: 800px;
+  border-radius: 24px;
+  padding: $spacing-xl;
+}
 
-  .list {
-    margin-left: $spacing-xxl;
-    width: 70%;
-    // flex-grow: 1;
-  }
+.left {
+  background-color: $eh-background-blue;
+}
 
-  .list-item {
-    border-top: 1px solid $border;
-    padding: $spacing-xl 0;
-  }
+.right {
+  margin-top: 160px;
+  background-color: $eh-background-cream;
 }

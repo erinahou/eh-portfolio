@@ -1,9 +1,11 @@
-<!-- Intro of project -->
-<div class="project-intro">
-  <div class="text">
+<div class="grid-container">
+  <!-- Intro of project -->
+  <div class="project-title">
     <h1><%= @project.title %></h1>
+  </div>
+  <!-- Tags (Build this so it's dynamic) -->
+  <div class="project-description">
     <h5><%= @project.description %></h5>
-    <!-- Tags (Build this so it's dynamic) -->
     <div class="tag-container">
       <p class="tags">Fintech</p>
       <p class="tags">Product</p>
@@ -18,22 +20,18 @@
   -->
 </div>
 
-<!--
-<div class="project-description">
-  <h3>Designing for simplicity, ease...</h3>
-  <h5><%= @project.description %></h5>
-</div>
--->
+  <!-- Display content (partials) based by project -->
+  <% if @project.title == "Finspo: Product" %>
+    <%= render "finspo_product" %>
+  <% elsif @project.title == "Finspo: Marketing" %>
+    <%= render "finspo_marketing" %>
+  <% elsif @project.title == "Kiraku" %>
+    <%= render "kiraku" %>
+  <% end %>
 
-<!-- Display content (partials) based by project -->
-<% if @project.title == "Finspo: Product" %>
-  <%= render "finspo_product" %>
-<% elsif @project.title == "Finspo: Marketing" %>
-  <%= render "finspo_marketing" %>
-<% end %>
-
-<%= link_to "Delete project",
-  project_path(@project),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-<%= link_to "Edit this project", edit_project_path(@project) %>
+  <!-- Remove this later -->
+  <%= link_to "Delete project",
+    project_path(@project),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  <%= link_to "Edit this project", edit_project_path(@project) %>
