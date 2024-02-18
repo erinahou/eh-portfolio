@@ -10,6 +10,7 @@
 @import "components/index";
 @import "pages/index";
 @import "config/fonts";
+@import "vendor/locomotive";
 
 // Other univeral styles
 * {
@@ -70,14 +71,10 @@ ul {
   }
 }
 
-.navbar {
-  border-bottom: 1px solid $eh-border-black;
-}
-
 .main-content {
-  padding: $spacing-xxl;
-  background: linear-gradient(to right, $eh-border-black 1px, transparent 1px);
-  background-size: 16.67%; /* Adjust the grid size */
+  padding: 160px $spacing-xxl;
+  // background: linear-gradient(to right, $eh-border-black 1px, transparent 1px);
+  // background-size: 16.67%; /* Adjust the grid size */
 }
 
 .grid-container {
@@ -110,6 +107,11 @@ ul {
 
 .bg-brown {
   background-color: $eh-background-brown;
+}
+
+.bg-card-hover {
+  border-radius: 50%; // NOTE TO SELF. INSTEAD OF USING STIMULUS, can you just use CSS?
+  transition: border-radius 1s;
 }
 
 /* Class to apply for text color */

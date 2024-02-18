@@ -1,12 +1,12 @@
 <div class="grid-container">
   <!-- Intro -->
-  <div class="intro">
+  <div class="intro" data-scroll data-scroll-speed="2">
     <h4>
     I'm a digital product designer with 10+ years of experience crafting high-quality products across finance, hospitality and art sectors mainly in startup settings. I thrive in the midst of complexity and ambiguity and excel as a cross-functional collaborator working with diverse teams to bring design concepts to life. <%= link_to "More", about_path, class: "more" %>
     </h4>
   </div>
 
-  <div class="skills">
+  <div class="skills" data-scroll data-scroll-speed="2">
     <p>Skills</p>
     <ul>
       <li>
@@ -26,11 +26,21 @@
   <!-- All projects -->
   <% @projects.each_with_index do |project, index| %>
     <% if index % 2 == 0 %>
-      <div class="list-item left">
-        <h3><%= link_to project.title, project_path(project) %></h3>
+      <div data-controller="card-hover"
+      data-card-hover-target="cardElement"
+      class="list-item left"
+      data-action="mouseover->card-hover#fire mouseleave->card-hover#reset"
+      data-scroll
+      data-scroll-speed="2"
+      >
+        <h3>
+          <%= link_to project.title, project_path(project) %>
+        </h3>
       </div>
     <% else %>
-      <div class="list-item right">
+      <div class="list-item right"
+       data-scroll
+       data-scroll-speed="4">
         <h3><%= link_to project.title, project_path(project) %></h3>
       </div>
     <% end %>

@@ -1,6 +1,13 @@
 .navbar {
+  position: fixed;
+  width: 100%;
+  // position: -webkit-sticky; /* For Safari */
+  // position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 24px;
+  z-index: 1000;
+  background-color: rgba(244, 245, 242, 0.6);; /* Slightly transparent background */
+  backdrop-filter: blur(10px);
 }

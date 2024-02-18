@@ -72,3 +72,4 @@ end
 gem "simple_form"
 gem "cloudinary"
 gem "sassc-rails"
+gem "autoprefixer-rails"
