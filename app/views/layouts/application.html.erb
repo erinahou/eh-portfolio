@@ -23,21 +23,21 @@
       <%= link_to "About", about_path %>
     </div>
     <!-- Other testing junk -->
-    <div class="main-content">
+    <div class="main-content" data-controller="locomotive-scroll">
       <%= yield %>
+      <!-- Footer -->
+      <footer>
+        <div>
+          <span>
+            Let's work together. erina.hou@gmail.com
+          </span>
+        </div>
+        <div>
+          <span>
+            Website built by me.
+          </span>
+        </div>
+      </footer>
     </div>
-    <!-- Footer -->
-    <footer>
-      <div>
-        <span>
-          Let's work together. erina.hou@gmail.com
-        </span>
-      </div>
-      <div>
-        <span>
-          Website built by me.
-        </span>
-      </div>
-    </footer>
   </body>
 </html>
