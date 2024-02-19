@@ -1,12 +1,12 @@
 <div class="grid-container">
   <!-- Intro -->
-  <div class="intro" data-scroll data-scroll-speed="2">
+  <div class="intro">
     <h4>
     I'm a digital product designer with 10+ years of experience crafting high-quality products across finance, hospitality and art sectors mainly in startup settings. I thrive in the midst of complexity and ambiguity and excel as a cross-functional collaborator working with diverse teams to bring design concepts to life. <%= link_to "More", about_path, class: "more" %>
     </h4>
   </div>
 
-  <div class="skills" data-scroll data-scroll-speed="2">
+  <div class="skills">
     <p>Skills</p>
     <ul>
       <li>
@@ -23,39 +23,57 @@
     </ul>
   </div>
 
-  <!-- All projects -->
+  <!-- All projects
   <% @projects.each_with_index do |project, index| %>
     <% if index % 2 == 0 %>
-      <div data-controller="card-hover"
-      data-card-hover-target="cardElement"
-      class="list-item left"
-      data-action="mouseover->card-hover#fire mouseleave->card-hover#reset"
-      data-scroll
-      data-scroll-speed="2"
-      >
+      <div class="list-item left" data-controller="card-hover" data-card-hover-target="cardElement" data-action="mouseover->card-hover#fire mouseleave->card-hover#reset">
         <h3>
           <%= link_to project.title, project_path(project) %>
         </h3>
       </div>
     <% else %>
-      <div class="list-item right"
-       data-scroll
-       data-scroll-speed="4">
+      <div class="list-item right">
         <h3><%= link_to project.title, project_path(project) %></h3>
       </div>
     <% end %>
   <% end %>
 </div>
-
-
-<!-- Old code
-
-  <div class="projects">
-    <% @projects.each do |project| %>
-      <div class="list-item">
-        <h3><%= link_to project.title, project_path(project) %></h3>
-      </div>
-    <% end %>
-  </div>
-
 -->
+
+  <!-- All projects -->
+  <% @projects.each_with_index do |project, index| %>
+    <% if index % 2 == 0 %>
+      <%= link_to project_path(project),
+      class: "list-item left",
+      data: { controller: "card-hover", card_hover_target: "cardElement", action: "mouseover->card-hover#fire mouseleave->card-hover#reset" } do %>
+        <div class="content">
+          <h4>
+            <%= project.title %>
+          </h4>
+          <!-- Image tags -->
+          <% if project.title == "Finspo: Marketing" %>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708302727/finspo_brand_thumbnail_withCanvas_uufaly.png", alt: "Finspo marketing thumbnail" %>
+          <% elsif project.title == "Finspo: Product"%>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708302700/finspo_product_thumbnail_withCanvas_qr4jsg.png", alt: "Finspo product thumbnail" %>
+          <% end%>
+        </div>
+      <% end %>
+    <% else %>
+      <%= link_to project_path(project),
+      class: "list-item right",
+      data: { controller: "card-hover", card_hover_target: "cardElement", action: "mouseover->card-hover#fire mouseleave->card-hover#reset" } do %>
+        <div class="content">
+          <h4>
+            <%= project.title %>
+          </h4>
+                    <!-- Image tags -->
+          <% if project.title == "Finspo: Marketing" %>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708302727/finspo_brand_thumbnail_withCanvas_uufaly.png", alt: "Finspo illustration of shopper" %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

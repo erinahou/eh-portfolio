@@ -8,4 +8,31 @@
   li {
     padding-top: $spacing-m;
   }
+
+  .sub-title {
+    color: $eh-text-tertiary;
+  }
+}
+
+/* Media queries */
+
+@media screen and (max-width: 840px) {
+  .about-erina {
+    grid-column-start: span 12;
+  }
+
+  .bio-block {
+    grid-column-start: span 12;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 841px) and (max-width: 1240px) {
+  .about-erina {
+    grid-column-start: span 6;
+  }
+
+  .bio-block {
+    grid-column-start: span 2;
+  }
 }

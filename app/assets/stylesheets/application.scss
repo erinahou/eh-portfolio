@@ -5,12 +5,11 @@
 @import "config/spacing";
 
 // External libraries
+@import "vendor/locomotive";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "config/fonts";
-@import "vendor/locomotive";
 
 // Other univeral styles
 * {
@@ -24,7 +23,10 @@
 }
 
 body {
-  background-color: $background-color;
+  background-color: $eh-background-main;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -58,7 +60,7 @@ h5 {
 
 p {
   font-size: 16px;
-  color: $eh-text-secondary;
+  color: $eh-text-primary;
 }
 
 ul {
@@ -72,7 +74,9 @@ ul {
 }
 
 .main-content {
-  padding: 160px $spacing-xxl;
+  padding: 120px $spacing-xxl 0 $spacing-xxl;
+  margin: 0 auto;
+  max-width: 1800px;
   // background: linear-gradient(to right, $eh-border-black 1px, transparent 1px);
   // background-size: 16.67%; /* Adjust the grid size */
 }
@@ -80,7 +84,8 @@ ul {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: $spacing-xl $spacing-xxl;
+  gap:  $spacing-xxl $spacing-xxl;
+  margin-bottom: $spacing-xl;
 }
 
 /* Class to apply border radius to elements */
@@ -110,8 +115,9 @@ ul {
 }
 
 .bg-card-hover {
-  border-radius: 50%; // NOTE TO SELF. INSTEAD OF USING STIMULUS, can you just use CSS?
-  transition: border-radius 1s;
+  // border-radius: 50%; // NOTE TO SELF. INSTEAD OF USING STIMULUS, can you just use CSS?
+  transition: background-color 500ms;
+  background-color: $eh-background-signature;
 }
 
 /* Class to apply for text color */
@@ -128,14 +134,55 @@ ul {
   padding-top: $spacing-xl;
 }
 
+.m-top-xl {
+  margin-top: $spacing-xl;
+}
+
 /* Others */
 .more {
   text-decoration: underline;
 }
 
+.hyperlink-text {
+  text-decoration: underline;
+}
+
 /* Media queries */
-@media screen and (max-width: 800px) {
+
+/* Mobile */
+@media screen and (max-width: 840px) {
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
   .main-content {
-    padding: $spacing-l;
+    padding: 100px $spacing-l;
+  }
+
+  .grid-container {
+    gap:  $spacing-xl 0;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 841px) and (max-width: 1240px) {
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .main-content {
+    padding: 100px $spacing-xl 0 $spacing-xl;
+  }
+
+  .grid-container {
+    gap:  $spacing-xl $spacing-xl;
   }
 }

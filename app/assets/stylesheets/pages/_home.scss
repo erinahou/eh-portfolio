@@ -1,5 +1,4 @@
 .intro {
-  padding-bottom: $spacing-xl;
   grid-column-start: span 8;
 }
 
@@ -8,10 +7,38 @@
 }
 
 .list-item {
+  // grid-column-start: span 6;
+  // height: 800px;
+  // padding: $spacing-xl;
   grid-column-start: span 6;
-  height: 800px;
-  border-radius: 24px;
-  padding: $spacing-xl;
+  height: 0; /* Set initial height to 0 to create the aspect ratio */
+  // padding-top: 66.67%; /* Set padding-top to 66.67% (2/3 of the width) to maintain 3:2 aspect ratio */
+  padding-top: 120%; /* Set padding-top to 66.67% (2/3 of the width) to maintain 3:2 aspect ratio */
+  position: relative; /* Position relative for absolute positioning of child elements */
+  border-radius: $spacing-m;
+  overflow: hidden;
+
+  h4 {
+    padding: $spacing-xl $spacing-xl 0 $spacing-xl;
+  }
+
+  .content {
+    position: absolute; /* Position absolute to position content inside the container */
+    top: 0; /* Align content to the top */
+    left: 0; /* Align content to the left */
+    width: 100%; /* Set content width to 100% of the container */
+    height: 100%; /* Set content height to 100% of the container */
+  }
+
+  .img-container {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .left {
@@ -21,4 +48,33 @@
 .right {
   margin-top: 160px;
   background-color: $eh-background-cream;
+}
+
+/* Media queries */
+
+/* Mobile */
+@media screen and (max-width: 840px) {
+  .intro {
+    grid-column-start: span 12;
+  }
+
+  .skills {
+    grid-column-start: span 12;
+  }
+
+  .list-item {
+    grid-column-start: span 12;
+    margin-bottom: $spacing-xl;
+  }
+
+  .right {
+    margin-top: 0px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 841px) and (max-width: 1240px) {
+  .intro {
+    margin-bottom: $spacing-xxl;
+  }
 }

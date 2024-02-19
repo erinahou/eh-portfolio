@@ -1,6 +1,7 @@
 footer {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid $border;
-  padding: $spacing-xl;
+  padding: $spacing-l;
+  /* Anchor the footer to the bottom of the page */
+  margin-top: auto;
 }

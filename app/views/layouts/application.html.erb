@@ -16,28 +16,29 @@
     <div class="navbar">
       <%= link_to "erinaho.co", root_path %>
       <p>
-        <span data-controller="typed" data-typed-strings-value="<%= ["Designing Digital Experiences", "Looking for new opportunities"] %>">
+        <span data-controller="typed"
+        data-typed-strings-value="<%= ["Designing Digital Experiences", "Looking for new opportunities"] %>">
           Designing Digital Experiences
         </span>
       </p>
       <%= link_to "About", about_path %>
     </div>
     <!-- Other testing junk -->
-    <div class="main-content" data-controller="locomotive-scroll">
+    <div class="main-content">
       <%= yield %>
-      <!-- Footer -->
-      <footer>
-        <div>
-          <span>
-            Let's work together. erina.hou@gmail.com
-          </span>
-        </div>
-        <div>
-          <span>
-            Website built by me.
-          </span>
-        </div>
-      </footer>
     </div>
+    <!-- Footer -->
+    <footer>
+      <div>
+        <span>
+          E. &nbsp; &nbsp; &nbsp; erina.hou@gmail.com
+        </span>
+      </div>
+      <div>
+        <span>
+          Website built by me.
+        </span>
+      </div>
+    </footer>
   </body>
 </html>
