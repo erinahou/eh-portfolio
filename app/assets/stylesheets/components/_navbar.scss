@@ -9,3 +9,24 @@
   background-color: rgba(238, 238, 230, 0.5); /* Slightly transparent background */
   backdrop-filter: blur(10px);
 }
+
+/* Media queries */
+
+/* Mobile */
+@media screen and (max-width: 840px) {
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .main-content {
+    padding: 100px $spacing-l;
+  }
+
+  .grid-container {
+    gap:  $spacing-xl 0;
+  }
+}
