@@ -34,27 +34,27 @@ a {
 }
 
 h1 {
-  font-size: 56px;
-  font-weight: 400;
-}
-
-h2 {
   font-size: 48px;
   font-weight: 400;
 }
 
-h3 {
+h2 {
   font-size: 40px;
   font-weight: 400;
 }
 
-h4 {
+h3 {
   font-size: 32px;
   font-weight: 400;
 }
 
-h5 {
+h4 {
   font-size: 24px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -73,6 +73,10 @@ ul {
   }
 }
 
+.sub-title {
+  color: $eh-text-tertiary;
+}
+
 .main-content {
   padding: 120px $spacing-xxl 0 $spacing-xxl;
   margin: 0 auto;
@@ -89,6 +93,10 @@ ul {
 }
 
 /* Class to apply border radius to elements */
+.br-8 {
+  border-radius: $border-radius-s;
+}
+
 .br-24 {
   border-radius: $border-radius-l;
 }
@@ -134,6 +142,18 @@ ul {
   padding-top: $spacing-xl;
 }
 
+.p-bottom-xl {
+  padding-bottom: $spacing-xl;
+}
+
+.p-top-xxl {
+  padding-top: $spacing-xxl;
+}
+
+.p-bottom-xxl {
+  padding-bottom: $spacing-xxl;
+}
+
 .m-top-xl {
   margin-top: $spacing-xl;
 }
@@ -151,14 +171,6 @@ ul {
 
 /* Mobile */
 @media screen and (max-width: 840px) {
-  h3 {
-    font-size: 32px;
-  }
-
-  h4 {
-    font-size: 24px;
-  }
-
   .main-content {
     padding: 100px $spacing-l;
   }
@@ -170,13 +182,6 @@ ul {
 
 /* Tablet */
 @media screen and (min-width: 841px) and (max-width: 1240px) {
-  h3 {
-    font-size: 32px;
-  }
-
-  h4 {
-    font-size: 24px;
-  }
 
   .main-content {
     padding: 100px $spacing-xl 0 $spacing-xl;

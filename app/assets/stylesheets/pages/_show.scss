@@ -1,10 +1,11 @@
 .project-title {
-  grid-column-start: span 5;
+  grid-column-start: span 4;
+  margin-right: $spacing-xl;
 }
 
 
 .project-description {
-  grid-column-start: span 7;
+  grid-column-start: span 8;
 }
 
 .tag-container {
@@ -15,37 +16,38 @@
 
 /* Finspo case studies */
 
-.finspo-case-studies {
-  .item {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 32px 32px;
-    margin-top: $spacing-xxl;
-  }
+.item {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $spacing-xl;
+  margin-top: $spacing-xxl;
+  grid-column-start: span 12;
+}
+
+.title {
+  grid-column-start: span 4;
 
   .case-study-label {
     color: $eh-text-tertiary;
   }
+}
 
-  .title {
-    grid-column-start: span 6;
-  }
+h5 {
+  margin-bottom: $spacing-s;
+}
 
-  h5 {
-    margin-bottom: $spacing-s;
-  }
-
-  .pca {
-    grid-column-start: span 2;
-  }
+.pca {
+  grid-column-start: span 4;
 }
 
 .rectangle-full {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-start: span 6;
+  grid-column-start: span 12;
   background-color: $eh-background-purple;
+  overflow: hidden;
+  border-radius: $border-radius-m;
 
   img {
     width: 100%;
@@ -70,10 +72,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-start: span 3;
-  min-height: 640px;
+  grid-column-start: span 6;
   overflow: hidden;
   background-color: $eh-background-purple;
+  border-radius: $border-radius-m;
 
   img {
     width: 70%;
@@ -84,8 +86,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-start: span 2;
+  grid-column-start: span 4;
   padding: $spacing-xxl 0;
+  border-radius: $border-radius-m;
 
   div {
     display: flex;
@@ -101,11 +104,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-start: span 4;
+  grid-column-start: span 8;
   padding: $spacing-xxl 0;
+  border-radius: $border-radius-m;
+
   img {
     width: 80%;
   }
+}
+
+.video-container {
+  padding: 60px 0;
 }
 
 .full-bleed {
@@ -115,13 +124,19 @@
 }
 
 dotlottie-player {
-  width: 70%;
+  width: 60%;
 }
 
 .emma-illo {
   height: 700px;
 
   img {
+    width: 50%;
+  }
+}
+
+.roladex {
+  dotlottie-player {
     width: 50%;
   }
 }
@@ -158,13 +173,28 @@ dotlottie-player {
   }
 }
 
+.finspo-logo {
+  height: 400px;
+
+  img {
+    height: 60px;
+  }
+}
+
+.finspo-logo-mark {
+  img {
+    height: 50px;
+  }
+}
+
+/* Kiraku Style Guide */
+
 .nazuna-business-card {
   img {
     width: 100%;
   }
 }
 
-/* Kiraku Style Guide */
 .kiraku-logo {
   img {
     width: 30%;
@@ -174,6 +204,15 @@ dotlottie-player {
 
 /* Media queries */
 @media screen and (max-width: 800px) {
+  .project-title {
+    grid-column-start: span 12;
+    margin-right: 0;
+  }
+
+  .project-description {
+    grid-column-start: span 12;
+  }
+
   .finspo-case-studies {
     .pca {
       grid-column-start: span 6;
