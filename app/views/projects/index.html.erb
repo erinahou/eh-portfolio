@@ -1,9 +1,9 @@
 <div class="grid-container">
   <!-- Intro -->
   <div class="intro">
-    <h4>
+    <h3>
     I'm a digital product designer with 10+ years of experience crafting high-quality products across finance, hospitality and art sectors mainly in startup settings. I thrive in the midst of complexity and ambiguity and excel as a cross-functional collaborator working with diverse teams to bring design concepts to life. <%= link_to "More", about_path, class: "more" %>
-    </h4>
+    </h3>
   </div>
 
   <div class="skills">
@@ -47,14 +47,14 @@
       class: "list-item left",
       data: { controller: "card-hover", card_hover_target: "cardElement", action: "mouseover->card-hover#fire mouseleave->card-hover#reset" } do %>
         <div class="content">
-          <h4>
+          <p>
             <%= project.title %>
-          </h4>
+          </p>
           <!-- Image tags -->
           <% if project.title == "Finspo: Marketing" %>
-            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708302727/finspo_brand_thumbnail_withCanvas_uufaly.png", alt: "Finspo marketing thumbnail" %>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708485107/finspo_market_thumbnail_v2_w4u3tw.png", alt: "Finspo marketing thumbnail" %>
           <% elsif project.title == "Finspo: Product"%>
-            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708302700/finspo_product_thumbnail_withCanvas_qr4jsg.png", alt: "Finspo product thumbnail" %>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708479464/finspo_product_thumbnail_v2_mz9xu4.png", alt: "Finspo product thumbnail" %>
           <% end%>
         </div>
       <% end %>
@@ -63,13 +63,13 @@
       class: "list-item right",
       data: { controller: "card-hover", card_hover_target: "cardElement", action: "mouseover->card-hover#fire mouseleave->card-hover#reset" } do %>
         <div class="content">
-          <h4>
+          <p>
             <%= project.title %>
-          </h4>
+          </p>
                     <!-- Image tags -->
           <% if project.title == "Finspo: Marketing" %>
             <div class="img-container">
-              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708302727/finspo_brand_thumbnail_withCanvas_uufaly.png", alt: "Finspo illustration of shopper" %>
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708485107/finspo_market_thumbnail_v2_w4u3tw.png", alt: "Finspo illustration of shopper" %>
             </div>
           <% end %>
         </div>

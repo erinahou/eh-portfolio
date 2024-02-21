@@ -8,7 +8,10 @@
 // To use a font file (.woff) uncomment following lines
 @font-face {
   font-family: "PPRadioGrotesk-Regular";
-  src:font-url('../../fonts/PPRadioGrotesk-Regular.woff') format('woff');
+  src:font-url('../../fonts/PPRadioGrotesk-Regular.woff') format('woff'),
+  font-url('../../fonts/PPRadioGrotesk-Regular.woff2') format('woff'),
+  font-url('../../fonts/PPRadioGrotesk-Regular.ttf') format('truetype'),
+  font-url('../../fonts/PPRadioGrotesk-Regular.otf') format('opentype');
 }
 
 $my-font: "PPRadioGrotesk-Regular", "Helvetica", "sans-serif";
