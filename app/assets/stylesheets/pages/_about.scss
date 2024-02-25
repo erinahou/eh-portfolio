@@ -1,5 +1,9 @@
 .about-erina {
   grid-column-start: span 6;
+
+  .sub-title {
+    margin: 0;
+  }
 }
 
 .bio-block {
@@ -7,6 +11,10 @@
 
   li {
     padding-top: $spacing-m;
+  }
+
+  .sub-title {
+    margin: 0;
   }
 }
 

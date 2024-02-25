@@ -6,8 +6,13 @@
   justify-content: space-between;
   padding: 24px;
   z-index: 1000;
-  background-color: rgba(238, 238, 230, 0.5); /* Slightly transparent background */
+  background-color: $eh-background-main; /* Slightly transparent background */
   backdrop-filter: blur(10px);
+
+  a {
+    font-family: $secondary-font;
+    font-size: 13px;
+  }
 }
 
 /* Media queries */

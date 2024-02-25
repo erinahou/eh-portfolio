@@ -30,10 +30,10 @@
   .case-study-label {
     color: $eh-text-tertiary;
   }
-}
 
-h5 {
-  margin-bottom: $spacing-s;
+  .project-label {
+    margin-top: $spacing-s;
+  }
 }
 
 .pca {
@@ -47,7 +47,7 @@ h5 {
   grid-column-start: span 12;
   background-color: $eh-background-purple;
   overflow: hidden;
-  border-radius: $border-radius-m;
+  border-radius: $border-radius-s;
 
   img {
     width: 100%;
@@ -62,10 +62,6 @@ h5 {
     max-height: 80%;
     max-width: 80%;
   }
-
-  .emma-illo {
-    width: 50%;
-  }
 }
 
 .square-half-half {
@@ -75,7 +71,7 @@ h5 {
   grid-column-start: span 6;
   overflow: hidden;
   background-color: $eh-background-purple;
-  border-radius: $border-radius-m;
+  border-radius: $border-radius-s;
 
   img {
     width: 70%;
@@ -88,7 +84,7 @@ h5 {
   align-items: center;
   grid-column-start: span 4;
   padding: $spacing-xxl 0;
-  border-radius: $border-radius-m;
+  border-radius: $border-radius-s;
 
   div {
     display: flex;
@@ -106,7 +102,7 @@ h5 {
   align-items: center;
   grid-column-start: span 8;
   padding: $spacing-xxl 0;
-  border-radius: $border-radius-m;
+  border-radius: $border-radius-s;
 
   img {
     width: 80%;
@@ -128,10 +124,11 @@ dotlottie-player {
 }
 
 .emma-illo {
-  height: 700px;
+  // height: 700px;
 
   img {
     width: 50%;
+    padding: 120px 0;
   }
 }
 
@@ -182,6 +179,8 @@ dotlottie-player {
 }
 
 .finspo-logo-mark {
+  height: 400px;
+
   img {
     height: 50px;
   }
@@ -196,14 +195,24 @@ dotlottie-player {
 }
 
 .kiraku-logo {
+  height: 400px;
+
   img {
     width: 30%;
   }
 }
 
+.kiraku-lobby {
+  img {
+    width: 100%;
+  }
+}
+
 
 /* Media queries */
-@media screen and (max-width: 800px) {
+
+/* Mobile */
+@media screen and (max-width: 840px) {
   .project-title {
     grid-column-start: span 12;
     margin-right: 0;
@@ -220,6 +229,21 @@ dotlottie-player {
   }
 
   .square-half-half {
-    grid-column-start: span 6;
+    grid-column-start: span 12;
+  }
+
+  .square-triptic {
+    grid-column-start: span 12;
+  }
+
+  .rectangle-two-thirds {
+    grid-column-start: span 12;
+  }
+
+  .emma-illo {
+    img {
+      width: 70%;
+      padding: $spacing-xxl 0;
+    }
   }
 }

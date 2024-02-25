@@ -6,39 +6,19 @@
     </h3>
   </div>
 
-  <div class="skills">
-    <p>Skills</p>
+  <div class="bio-block">
+    <p class="capabilities-homepage sub-title">Capabilities</p>
+    <p>-</p>
     <ul>
       <li>
-        <p class="p-top-m">UI/UX</p>
-        <p>Art direction</p>
-        <p>Brand</p>
+        <p>UI/UX</p>
+        <p>Art direction / Branding</p>
         <p>Animation</p>
         <p>Project management</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>Javascript</p>
-        <p>Ruby</p>
+        <p>Web development</p>
       </li>
     </ul>
   </div>
-
-  <!-- All projects
-  <% @projects.each_with_index do |project, index| %>
-    <% if index % 2 == 0 %>
-      <div class="list-item left" data-controller="card-hover" data-card-hover-target="cardElement" data-action="mouseover->card-hover#fire mouseleave->card-hover#reset">
-        <h3>
-          <%= link_to project.title, project_path(project) %>
-        </h3>
-      </div>
-    <% else %>
-      <div class="list-item right">
-        <h3><%= link_to project.title, project_path(project) %></h3>
-      </div>
-    <% end %>
-  <% end %>
-</div>
--->
 
   <!-- All projects -->
   <% @projects.each_with_index do |project, index| %>
@@ -52,9 +32,21 @@
           </p>
           <!-- Image tags -->
           <% if project.title == "Finspo: Marketing" %>
-            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708485107/finspo_market_thumbnail_v2_w4u3tw.png", alt: "Finspo marketing thumbnail" %>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708485107/finspo_market_thumbnail_v2_w4u3tw.png", alt: "Finspo marketing thumbnail" %>
+            </div>
           <% elsif project.title == "Finspo: Product"%>
-            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708479464/finspo_product_thumbnail_v2_mz9xu4.png", alt: "Finspo product thumbnail" %>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708479464/finspo_product_thumbnail_v2_mz9xu4.png", alt: "Finspo product thumbnail" %>
+            </div>
+          <% elsif project.title == "Kiraku"%>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1708827386/kiraku_thumbnail_vqfn9j.png", alt: "Finspo product thumbnail" %>
+            </div>
+          <% elsif project.title == "Kelp"%>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708500764/finspo_sideProjects_thumbnail_v2_jc00ff.png", alt: "Finspo product thumbnail" %>
+            </div>
           <% end%>
         </div>
       <% end %>
@@ -70,6 +62,14 @@
           <% if project.title == "Finspo: Marketing" %>
             <div class="img-container">
               <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708485107/finspo_market_thumbnail_v2_w4u3tw.png", alt: "Finspo illustration of shopper" %>
+            </div>
+          <% elsif project.title == "Side projects"%>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708500764/finspo_sideProjects_thumbnail_v2_jc00ff.png", alt: "Finspo product thumbnail" %>
+            </div>
+          <% elsif project.title == "Kiraku"%>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1708827386/kiraku_thumbnail_vqfn9j.png", alt: "Finspo product thumbnail" %>
             </div>
           <% end %>
         </div>

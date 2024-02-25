@@ -1,9 +1,9 @@
 .intro {
-  grid-column-start: span 8;
+  grid-column-start: span 9;
 }
 
-.skills {
-  grid-column-start: span 4;
+.capabilities-homepage {
+  grid-column-start: span 3;
 }
 
 .list-item {
@@ -18,7 +18,7 @@
   border-radius: $spacing-m;
   overflow: hidden;
 
-  h3 {
+  p {
     padding: $spacing-xl $spacing-xl 0 $spacing-xl;
   }
 
@@ -31,13 +31,22 @@
   }
 
   .img-container {
+    // width: 100%;
+    // height: auto;
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Horizontally center content */
+    align-items: flex-start; /* Vertically center content */
+
   }
 
   img {
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    // height: auto;
+    max-width: 100%; /* Ensure image does not exceed the container width */
+    max-height: 100%; /* Ensure image does not exceed the container height */
+    display: block; /* Make the image a block element */
   }
 }
 
@@ -64,7 +73,7 @@
 
   .list-item {
     grid-column-start: span 12;
-    margin-bottom: $spacing-xl;
+    margin: $spacing-l 0 $spacing-xl 0;
   }
 
   .right {
