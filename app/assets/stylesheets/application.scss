@@ -58,8 +58,9 @@ h5 {
   font-weight: 400;
 }
 
-p {
-  font-size: 15px;
+p, span, li {
+  font-family: $secondary-font;
+  font-size: 13px;
   color: $eh-text-primary;
 }
 
@@ -75,6 +76,7 @@ ul {
 
 .sub-title {
   color: $eh-text-tertiary;
+  margin-bottom: $spacing-s;
 }
 
 .main-content {
@@ -164,6 +166,7 @@ ul {
 }
 
 .hyperlink-text {
+  font-family: $secondary-font;
   text-decoration: underline;
 }
 
@@ -171,12 +174,41 @@ ul {
 
 /* Mobile */
 @media screen and (max-width: 840px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
   .main-content {
-    padding: 100px $spacing-l;
+    padding: 80px $spacing-l;
   }
 
   .grid-container {
     gap:  $spacing-xl 0;
+  }
+
+  .item {
+    margin-top: 16px;
+    gap: $spacing-l;
+  }
+
+  .typer {
+    display: none;
+  }
+
+  .title {
+    grid-column-start: span 12;
+  }
+
+  .pca {
+    grid-column-start: span 12;
   }
 }
 
