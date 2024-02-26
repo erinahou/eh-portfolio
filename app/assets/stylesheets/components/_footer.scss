@@ -5,3 +5,13 @@ footer {
   /* Anchor the footer to the bottom of the page */
   margin-top: auto;
 }
+
+/* Media queries */
+
+/* Mobile */
+@media screen and (max-width: 840px) {
+  footer {
+    flex-direction: column;
+    gap: $spacing-s 0;
+  }
+}

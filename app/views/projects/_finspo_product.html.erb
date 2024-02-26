@@ -26,11 +26,7 @@
       <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708314556/finspo_dff_mobile_1280x700_q5kwt8.png", alt: "Mobile experience of DFF" %>
     </div>
     <div class="rectangle-full video-container">
-      <video autoplay muted loop>
-          <source src="https://res.cloudinary.com/dmvbynqto/video/upload/v1707780570/finspo_dff_recording_jane_sshvzq.mp4" type="video/mp4">
-          <%# <source src="video.webm" type="video/webm"> %>
-          Your browser does not support the video tag.
-      </video>
+      <%= cl_video_tag("finspo_dff_recording_jane_sshvzq", :width => 200, :height => 150, :resource_type => :video, :autoplay => true, :controls => true, :loop => true, :muted => true, :crop=>"fill") %>
     </div>
   </div>
 
