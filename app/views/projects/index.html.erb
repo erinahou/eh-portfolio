@@ -25,7 +25,12 @@
     <% if index % 2 == 0 %>
       <%= link_to project_path(project),
       class: "list-item left",
-      data: { controller: "card-hover", card_hover_target: "cardElement", action: "mouseover->card-hover#fire mouseleave->card-hover#reset" } do %>
+      data: {
+        controller: "card-hover",
+        card_hover_target: "cardElement",
+        action: "mouseover->card-hover#fire mouseleave->card-hover#reset",
+        project_title: project.title # Add data attribute with project title
+        } do %>
         <div class="content">
           <p>
             <%= project.title %>
@@ -43,7 +48,7 @@
             <div class="img-container">
               <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1708827386/kiraku_thumbnail_vqfn9j.png", alt: "Finspo product thumbnail" %>
             </div>
-          <% elsif project.title == "Kelp"%>
+          <% elsif project.title == "Side projects"%>
             <div class="img-container">
               <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708500764/finspo_sideProjects_thumbnail_v2_jc00ff.png", alt: "Finspo product thumbnail" %>
             </div>
@@ -53,7 +58,12 @@
     <% else %>
       <%= link_to project_path(project),
       class: "list-item right",
-      data: { controller: "card-hover", card_hover_target: "cardElement", action: "mouseover->card-hover#fire mouseleave->card-hover#reset" } do %>
+      data: {
+        controller: "card-hover",
+        card_hover_target: "cardElement",
+        action: "mouseover->card-hover#fire mouseleave->card-hover#reset",
+        project_title: project.title # Add data attribute with project title
+        } do %>
         <div class="content">
           <p>
             <%= project.title %>
@@ -63,13 +73,17 @@
             <div class="img-container">
               <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708485107/finspo_market_thumbnail_v2_w4u3tw.png", alt: "Finspo illustration of shopper" %>
             </div>
-          <% elsif project.title == "Side projects"%>
+          <% elsif project.title == "Finspo: Product"%>
             <div class="img-container">
-              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708500764/finspo_sideProjects_thumbnail_v2_jc00ff.png", alt: "Finspo product thumbnail" %>
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708479464/finspo_product_thumbnail_v2_mz9xu4.png", alt: "Finspo product thumbnail" %>
             </div>
           <% elsif project.title == "Kiraku"%>
             <div class="img-container">
               <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1708827386/kiraku_thumbnail_vqfn9j.png", alt: "Finspo product thumbnail" %>
+            </div>
+          <% elsif project.title == "Side projects"%>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1708500764/finspo_sideProjects_thumbnail_v2_jc00ff.png", alt: "Finspo product thumbnail" %>
             </div>
           <% end %>
         </div>
