@@ -3,6 +3,10 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+
+    # Move "Side projects" to the end of the collection
+    side_projects = @projects.select { |project| project.title == "Side projects" }
+    @projects = @projects - side_projects + side_projects
   end
 
   def show
