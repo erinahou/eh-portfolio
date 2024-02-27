@@ -8,12 +8,6 @@
   grid-column-start: span 8;
 }
 
-.tag-container {
-  display: flex;
-  gap: 1em;
-  margin-top: $spacing-m;
-}
-
 /* Finspo case studies */
 
 .item {
@@ -47,7 +41,6 @@
   grid-column-start: span 12;
   background-color: $eh-background-purple;
   overflow: hidden;
-  border-radius: $border-radius-s;
 
   img {
     width: 100%;
@@ -59,8 +52,8 @@
   }
 
   .palette {
-    max-height: 80%;
-    max-width: 80%;
+    max-height: 100%;
+    // max-width: %;
   }
 }
 
@@ -71,7 +64,6 @@
   grid-column-start: span 6;
   overflow: hidden;
   background-color: $eh-background-purple;
-  border-radius: $border-radius-s;
 
   img {
     width: 70%;
@@ -84,7 +76,6 @@
   align-items: center;
   grid-column-start: span 4;
   padding: $spacing-xxl 0;
-  border-radius: $border-radius-s;
 
   div {
     display: flex;
@@ -102,7 +93,6 @@
   align-items: center;
   grid-column-start: span 8;
   padding: $spacing-xxl 0;
-  border-radius: $border-radius-s;
 
   img {
     width: 80%;

@@ -80,7 +80,7 @@ ul {
 }
 
 .main-content {
-  padding: 120px $spacing-xxl 0 $spacing-xxl;
+  padding: 130px $spacing-xxl 0 $spacing-xxl;
   margin: 0 auto;
   max-width: 1800px;
   // background: linear-gradient(to right, $eh-border-black 1px, transparent 1px);
@@ -90,7 +90,7 @@ ul {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap:  $spacing-xxl $spacing-xxl;
+  gap:  $spacing-xl $spacing-xl;
   margin-bottom: $spacing-xl;
 }
 
@@ -124,10 +124,35 @@ ul {
   background-color: $eh-background-brown;
 }
 
+.bg-light-brown {
+  background-color: $eh-background-light-brown;
+}
+
+.bg-purple {
+  background-color: $eh-background-purple;
+}
+
+.bg-lime {
+  background-color: $eh-background-lime;
+}
+
+.bg-aqua {
+  background-color: $eh-background-aqua;
+}
+
+.bg-background {
+  background-color: $eh-background-main;
+}
+
 .bg-card-hover {
-  // border-radius: 50%; // NOTE TO SELF. INSTEAD OF USING STIMULUS, can you just use CSS?
-  transition: background-color 500ms;
-  background-color: $eh-background-signature;
+  transition: background-color 0.5s ease-in-out;
+  background-color: black;
+  // background: linear-gradient(to right, $eh-border-black 1px, $eh-background-signature 1px);
+  background-size: 10%; /* Adjust the grid size */
+
+  p {
+    color: white;
+  }
 }
 
 /* Class to apply for text color */

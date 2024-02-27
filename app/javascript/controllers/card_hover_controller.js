@@ -6,13 +6,13 @@ export default class extends Controller {
 
   connect() {
     if (this.cardElementTarget.dataset.projectTitle === "Finspo: Marketing") {
-      this.cardElementTarget.classList.add("bg-navy");
-    } else if (this.cardElementTarget.dataset.projectTitle === "Finspo: Product") {
-      this.cardElementTarget.classList.add("bg-blue");
-    } else if (this.cardElementTarget.dataset.projectTitle === "Kiraku") {
-      this.cardElementTarget.classList.add("bg-brown");
-    } else if (this.cardElementTarget.dataset.projectTitle === "Side projects") {
       this.cardElementTarget.classList.add("bg-cream");
+    } else if (this.cardElementTarget.dataset.projectTitle === "Finspo: Product") {
+      this.cardElementTarget.classList.add("bg-purple");
+    } else if (this.cardElementTarget.dataset.projectTitle === "Kiraku") {
+      this.cardElementTarget.classList.add("bg-light-brown");
+    } else if (this.cardElementTarget.dataset.projectTitle === "Side projects") {
+      this.cardElementTarget.classList.add("bg-aqua");
     }
   }
 
