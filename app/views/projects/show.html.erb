@@ -16,20 +16,13 @@
   -->
 </div>
 
-  <!-- Display content (partials) based by project -->
-  <% if @project.title == "Finspo: Product" %>
-    <%= render "finspo_product" %>
-  <% elsif @project.title == "Finspo: Marketing" %>
-    <%= render "finspo_marketing" %>
-  <% elsif @project.title == "Kiraku" %>
-    <%= render "kiraku" %>
-  <% elsif @project.title == "Side projects" %>
-    <%= render "side_projects" %>
-  <% end %>
-
-  <!-- Remove this later -->
-  <%= link_to "Delete project",
-    project_path(@project),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-  <%= link_to "Edit this project", edit_project_path(@project) %>
+<!-- Display content (partials) based by project -->
+<% if @project.title == "Finspo: Product" %>
+  <%= render "finspo_product" %>
+<% elsif @project.title == "Finspo: Marketing" %>
+  <%= render "finspo_marketing" %>
+<% elsif @project.title == "Kiraku" %>
+  <%= render "kiraku" %>
+<% elsif @project.title == "Side projects" %>
+  <%= render "side_projects" %>
+<% end %>
