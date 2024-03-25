@@ -24,11 +24,15 @@
             </div>
           <% elsif project.title == "Kiraku"%>
             <div class="img-container">
-              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1709015028/kiraku_project_thumbnail_3x_v3_muh1ag.png", alt: "Finspo product thumbnail" %>
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1709015028/kiraku_project_thumbnail_3x_v3_muh1ag.png", alt: "Kiraku thumbnail" %>
             </div>
           <% elsif project.title == "Side projects"%>
             <div class="img-container">
-              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1709015373/lep_project_thumbnail_3x_jbrxpb.png", alt: "Finspo product thumbnail" %>
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1709015373/lep_project_thumbnail_3x_jbrxpb.png", alt: "Kelp thumbnail" %>
+            </div>
+          <% elsif project.title == "Artsy"%>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1711338293/artsy_thumbnail_3x_z8ebdj.png", alt: "Artsy thumbnail image" %>
             </div>
           <% end%>
         </div>
@@ -62,6 +66,10 @@
           <% elsif project.title == "Side projects"%>
             <div class="img-container">
               <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/t_width 2000/v1709015373/lep_project_thumbnail_3x_jbrxpb.png", alt: "Finspo product thumbnail" %>
+            </div>
+          <% elsif project.title == "Artsy"%>
+            <div class="img-container">
+              <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1711338293/artsy_thumbnail_3x_z8ebdj.png", alt: "Artsy thumbnail image" %>
             </div>
           <% end %>
         </div>

@@ -13,6 +13,8 @@ export default class extends Controller {
       this.cardElementTarget.classList.add("bg-light-brown");
     } else if (this.cardElementTarget.dataset.projectTitle === "Side projects") {
       this.cardElementTarget.classList.add("bg-aqua");
+    } else if (this.cardElementTarget.dataset.projectTitle === "Artsy") {
+      this.cardElementTarget.classList.add("bg-steel");
     }
   }
 
