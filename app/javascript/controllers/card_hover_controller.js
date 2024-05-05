@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="card-hover"
 export default class extends Controller {
-  static targets = ["cardElement"]
+  static targets = ["cardElement", "arrowImage"]
 
   connect() {
     if (this.cardElementTarget.dataset.projectTitle === "Finspo: Marketing") {
@@ -21,9 +21,11 @@ export default class extends Controller {
 
   fire() {
     this.cardElementTarget.classList.add("bg-card-hover");
+    this.arrowImageTarget.setAttribute("src", "https://res.cloudinary.com/dmvbynqto/image/upload/v1714819992/arrow_white_ciklxl.svg");
   }
 
   reset() {
     this.cardElementTarget.classList.remove("bg-card-hover");
+    this.arrowImageTarget.setAttribute("src", "https://res.cloudinary.com/dmvbynqto/image/upload/v1714812044/arrow_wejmil.svg");
   }
 }
