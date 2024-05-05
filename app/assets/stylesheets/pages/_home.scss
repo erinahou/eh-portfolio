@@ -11,12 +11,14 @@
   grid-column-start: span 6;
   display: flex;
   overflow: hidden;
-  background-color: $eh-background-cream; /* Apply default color in case background color from javascript doesn't load */
+  background-color: $eh-background-lime; /* Apply default color in case background color from javascript doesn't load */
+  border-radius: 16px;
 
   .content {
     display: flex;
     flex-direction: column;
     margin-top: $spacing-l;
+    width: 100%;
   }
 
   p {
@@ -35,6 +37,29 @@
   }
 }
 
+.case-study {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 8px 32px 32px 32px;
+
+
+  p {
+    padding: 0;
+  }
+
+  .case-study--label {
+    background-color: red($color: #000000);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .case-study--title {
+    display: flex;
+  }
+
+}
 /* Media queries */
 
 /* Mobile */

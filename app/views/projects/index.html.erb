@@ -2,28 +2,141 @@
   <!-- Intro -->
   <div class="intro">
     <h3>
-    I'm a digital product designer with 10+ years of experience crafting high-quality products. I excel in creating great customer experiences in complex, regulated industries through collaborating cross-functionally to bring design concepts to life.
+    I'm a Product Designer with 10+ years of experience crafting high-quality products. I excel in creating great customer experiences in complex, regulated industries through collaborating cross-functionally to bring design concepts to life.
     <br><br>
     My journey started at Parsons School of Design. Most recently, I was the Head of Design at a fintech called Finspo. Prior to that, I've worked at Kiraku, Artsy, IDEO and Shiseido.
-    <br><br>
-    I can also code.
     <%= link_to "More", about_path, class: "more" %>
+    <br><br>
     </h3>
   </div>
 
   <div class="bio-block">
-    <p class="capabilities-homepage sub-title">Capabilities</p>
+    <p class="capabilities-homepage sub-title">Skills</p>
     <p>-</p>
     <ul>
       <li>
         <p>UI/UX</p>
-        <p>Art direction / Branding</p>
-        <p>Animation</p>
-        <p>Project management</p>
+        <p>Prototyping</p>
+        <p>Web/Mobile design</p>
         <p>Web development</p>
+        <p>Strategy</p>
+        <p>Branding</p>
       </li>
     </ul>
   </div>
 
-  <%= render "project_list" %>
+<!-- New case studies to replace render -->
+<!-- Case study 01 -->
+<div class="list-item"
+data-controller="card-hover"
+data-card-hover-target="cardElement"
+data-action="mouseover->card-hover#fire mouseleave->card-hover#reset">
+  <div class="content">
+      <%= link_to "https://pitch.com/v/building-a-centralized-source-of-truth-g2bdbm",
+      class: "case-study",
+      target: "_blank" do %>
+        <div class="case-study--label">
+            <div>
+              <p class="underline">Case study 01</p>
+              <p>Oct 2022</p>
+            </div>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1714812044/arrow_wejmil.svg",
+            class: "arrow",
+            data: {
+              card_hover_target: "arrowImage"
+            },
+            alt: "new tab arrow" %>
+        </div>
+        <div class="case-study--title">
+          <h3>Rethinking portal experience on Finspo</h3>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+<!-- Case study 02 -->
+<div class="list-item bg-lime"
+data-controller="card-hover"
+data-card-hover-target="cardElement"
+data-action="mouseover->card-hover#fire mouseleave->card-hover#reset">
+  <div class="content">
+      <%= link_to "https://pitch.com/v/reimagining-the-customer-portal-pf7pgz",
+      class: "case-study",
+      target: "_blank" do %>
+        <div class="case-study--label">
+            <div>
+              <p class="underline">Case study 02</p>
+              <p>Nov 2023</p>
+            </div>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1714812044/arrow_wejmil.svg",
+            class: "arrow",
+            data: {
+              card_hover_target: "arrowImage"
+            },
+            alt: "new tab arrow" %>
+        </div>
+        <div class="case-study--title">
+          <h3>Rethinking portal experience on Finspo</h3>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+<!-- Case study 03 -->
+<div class="list-item bg-lime"
+data-controller="card-hover"
+data-card-hover-target="cardElement"
+data-action="mouseover->card-hover#fire mouseleave->card-hover#reset">
+  <div class="content">
+      <%= link_to "https://pitch.com/v/improving-conversion-on-inquiry-form-6r8883",
+      class: "case-study",
+      target: "_blank" do %>
+        <div class="case-study--label">
+            <div>
+              <p class="underline">Case study 03</p>
+              <p>Feb 2023</p>
+            </div>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1714812044/arrow_wejmil.svg",
+            class: "arrow",
+            data: {
+              card_hover_target: "arrowImage"
+            },
+            alt: "new tab arrow" %>
+        </div>
+        <div class="case-study--title">
+          <h3>Improving conversion on Contact</h3>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+<!-- Case study 04 -->
+<div class="list-item bg-lime"
+data-controller="card-hover"
+data-card-hover-target="cardElement"
+data-action="mouseover->card-hover#fire mouseleave->card-hover#reset">
+  <div class="content">
+      <%= link_to "http://www.erinaho.xyz/projects/10",
+      class: "case-study" do %>
+        <div class="case-study--label">
+            <div>
+              <p class="underline">Case study 04</p>
+              <p>2022-2024</p>
+            </div>
+            <%= image_tag "https://res.cloudinary.com/dmvbynqto/image/upload/v1714812044/arrow_wejmil.svg",
+            class: "arrow",
+            data: {
+              card_hover_target: "arrowImage"
+            },
+            alt: "new tab arrow" %>
+        </div>
+        <div class="case-study--title">
+          <h3>Marketing support</h3>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+
+
 </div>

@@ -154,14 +154,18 @@ ul {
   // background: linear-gradient(to right, $eh-border-black 1px, $eh-background-signature 1px);
   background-size: 10%; /* Adjust the grid size */
 
-  p {
+  p, h3 {
     color: white;
   }
 }
 
-/* Class to apply for text color */
+/* Class to apply for text*/
 .txt-tertiary {
   color: $eh-text-tertiary;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /* Class to apply for spacing */
