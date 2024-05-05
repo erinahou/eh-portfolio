@@ -1,6 +1,6 @@
 .intro {
   grid-column-start: span 9;
-  margin-bottom: $spacing-xxl;
+  margin-bottom: $spacing-xl;
 }
 
 .capabilities-homepage {
@@ -38,7 +38,7 @@
 }
 
 .case-study {
-  height: 320px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
